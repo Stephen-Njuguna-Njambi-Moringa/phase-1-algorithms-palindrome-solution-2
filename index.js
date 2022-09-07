@@ -1,9 +1,31 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  var reverseWord = word.split("").reverse().join('')
+  if (reverseWord == word){
+      return true
+  }
+  else if(word.split('').length<2){
+      return false
+
+  }
+  else{
+      return false
+  }
+
 }
+
+
+   
+
 
 /* 
   Add your pseudocode here
+
+  iterate from the beginning of the string to the middle of the string
+  compare the letter we're iterating over to the corresponding letter at the end of the string
+  if the letters don't match, return false
+
+  if we reach the middle, and all the letters match, return true
 */
 
 /*
@@ -20,6 +42,26 @@ if (require.main === module) {
 
   console.log("Expecting: false");
   console.log("=>", isPalindrome("robot"));
+
+  console.log("Expecting: true");
+  console.log("=>", isPalindrome("mom"));
+
+  console.log("");
+
+  console.log("Expecting: true");
+  console.log("=>", isPalindrome("abba"));
+
+  console.log("");
+
+  console.log("Expecting: true");
+  console.log("=>", isPalindrome("a"));
+
+  console.log("");
+
+  console.log("Expecting: false");
+  console.log("=>", isPalindrome("hi"));
+
+  console.log("");
 }
 
 module.exports = isPalindrome;
